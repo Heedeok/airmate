@@ -1,0 +1,8 @@
+<launch>
+  <env name="ROSCONSOLE_FORMAT" value="[${severity}][${thread}][${node}/${function}:${line}]: ${message}"/>
+
+  <node pkg="airmate_navigation" type="airmate_navigation" name="airmate_navigation" output="screen" clear_params="true">
+    <param name="goal_frame_id" value="map"/>
+  </node>
+</launch>
+
