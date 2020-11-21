@@ -1,9 +1,9 @@
 # airmate(for melodic)
 
 ## Environment
-ubuntu : 18.04
-ROS : melodic
-python : 2.7
+- ubuntu : 18.04
+- ROS : melodic
+- python : 2.7
 
 ## Instal ROS(melodic)
 #### ros.org
