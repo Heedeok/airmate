@@ -1,0 +1,101 @@
+.class public abstract Lorg/jboss/netty/handler/codec/oneone/OneToOneEncoder;
+.super Ljava/lang/Object;
+.source "OneToOneEncoder.java"
+
+# interfaces
+.implements Lorg/jboss/netty/channel/ChannelDownstreamHandler;
+
+
+# direct methods
+.method protected constructor <init>()V
+    .registers 1
+
+    .line 49
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 50
+    return-void
+.end method
+
+
+# virtual methods
+.method protected abstract encode(Lorg/jboss/netty/channel/ChannelHandlerContext;Lorg/jboss/netty/channel/Channel;Ljava/lang/Object;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+.end method
+
+.method public handleDownstream(Lorg/jboss/netty/channel/ChannelHandlerContext;Lorg/jboss/netty/channel/ChannelEvent;)V
+    .registers 8
+    .param p1, "ctx"    # Lorg/jboss/netty/channel/ChannelHandlerContext;
+    .param p2, "evt"    # Lorg/jboss/netty/channel/ChannelEvent;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    .line 54
+    instance-of v0, p2, Lorg/jboss/netty/channel/MessageEvent;
+
+    if-nez v0, :cond_8
+
+    .line 55
+    invoke-interface {p1, p2}, Lorg/jboss/netty/channel/ChannelHandlerContext;->sendDownstream(Lorg/jboss/netty/channel/ChannelEvent;)V
+
+    .line 56
+    return-void
+
+    .line 59
+    :cond_8
+    move-object v0, p2
+
+    check-cast v0, Lorg/jboss/netty/channel/MessageEvent;
+
+    .line 60
+    .local v0, "e":Lorg/jboss/netty/channel/MessageEvent;
+    invoke-interface {v0}, Lorg/jboss/netty/channel/MessageEvent;->getMessage()Ljava/lang/Object;
+
+    move-result-object v1
+
+    .line 61
+    .local v1, "originalMessage":Ljava/lang/Object;
+    invoke-interface {v0}, Lorg/jboss/netty/channel/MessageEvent;->getChannel()Lorg/jboss/netty/channel/Channel;
+
+    move-result-object v2
+
+    invoke-virtual {p0, p1, v2, v1}, Lorg/jboss/netty/handler/codec/oneone/OneToOneEncoder;->encode(Lorg/jboss/netty/channel/ChannelHandlerContext;Lorg/jboss/netty/channel/Channel;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    .line 62
+    .local v2, "encodedMessage":Ljava/lang/Object;
+    if-ne v1, v2, :cond_1d
+
+    .line 63
+    invoke-interface {p1, p2}, Lorg/jboss/netty/channel/ChannelHandlerContext;->sendDownstream(Lorg/jboss/netty/channel/ChannelEvent;)V
+
+    goto :goto_2a
+
+    .line 64
+    :cond_1d
+    if-eqz v2, :cond_2a
+
+    .line 65
+    invoke-interface {v0}, Lorg/jboss/netty/channel/MessageEvent;->getFuture()Lorg/jboss/netty/channel/ChannelFuture;
+
+    move-result-object v3
+
+    invoke-interface {v0}, Lorg/jboss/netty/channel/MessageEvent;->getRemoteAddress()Ljava/net/SocketAddress;
+
+    move-result-object v4
+
+    invoke-static {p1, v3, v2, v4}, Lorg/jboss/netty/channel/Channels;->write(Lorg/jboss/netty/channel/ChannelHandlerContext;Lorg/jboss/netty/channel/ChannelFuture;Ljava/lang/Object;Ljava/net/SocketAddress;)V
+
+    .line 67
+    :cond_2a
+    :goto_2a
+    return-void
+.end method
