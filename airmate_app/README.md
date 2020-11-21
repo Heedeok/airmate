@@ -13,9 +13,9 @@ To build this project, you can use android studio.
  You can watch fornt view image of your robot and slam image from your robot's lidar data.
 
 
-![airmate_app](readme_images/purify1.mp4 "purify1")
+![airmate_app](readme_images/purify2.png "purify2")
 
-![airmate_app](readme_images/purify12.gif "purify2")
+![airmate_app](readme_images/purify1.png "purify1")
 
 ## Reference
 

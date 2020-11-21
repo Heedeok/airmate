@@ -79,5 +79,5 @@ rostopic pub /path_reset std_msgs/Empty -1
 ```
 
 ### Reference
-- Indrotuction video : 
+- Indrotuction youtube : https://youtu.be/Nz0BxnbTmKo
 
