@@ -15,7 +15,7 @@ To build this project, you can use android studio.
 
 ![airmate_app](readme_images/purify1.mp4 "purify1")
 
-![airmate_app](readme_images/purify12.mp4 "purify2")
+![airmate_app](readme_images/purify12.gif "purify2")
 
 ## Reference
 
