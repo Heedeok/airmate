@@ -1,4 +1,4 @@
-## airmate publisheer, subscriber node
+## airmate publisher, subscriber node
 
 #### Publish the '/dust_density' topic(std_msgs/Float32)
 ```
