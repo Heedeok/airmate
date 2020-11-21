@@ -19,6 +19,6 @@ To build this project, you can use android studio.
 
 ## Reference
 
-** Documentation on wiki - http://wiki.ros.org/ApplicationsPlatform/Clients/Android/Tutorials/Getting%20Started **
-** ROSjava github - https://github.com/rosjava/rosjava_core **
-** ROS application example - https://github.com/rosjava/android_apps **
+- Documentation on wiki : http://wiki.ros.org/ApplicationsPlatform/Clients/Android/Tutorials/Getting%20Started 
+- ROSjava github : https://github.com/rosjava/rosjava_core 
+- ROS application example : https://github.com/rosjava/android_apps 

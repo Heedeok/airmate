@@ -29,5 +29,5 @@ rostopic pub /path_ready std_msgs/Empty -1
 
 ## Reference
 
-Documentation on wiki - [http://wiki.ros.org/follow_waypoints](http://wiki.ros.org/follow_waypoints)
-Fowllow waypoint pacakage - https://github.com/danielsnider/follow_waypoints
+- Documentation on wiki : [http://wiki.ros.org/follow_waypoints](http://wiki.ros.org/follow_waypoints)
+- Fowllow waypoint pacakage : https://github.com/danielsnider/follow_waypoints
