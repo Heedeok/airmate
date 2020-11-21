@@ -18,11 +18,11 @@ Result screen
 
 '고정정화 모드'
 
-![airmate_app](readme_images/purify2.png "purify2")
+![airmate_app](../readme_images/purify2.png "purify2")
 
 '이동정화 모드'
 
-![airmate_app](readme_images/purify1.png "purify1")
+![airmate_app](../readme_images/purify1.png "purify1")
 
 ## Reference
 

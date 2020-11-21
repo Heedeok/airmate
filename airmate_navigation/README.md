@@ -2,7 +2,7 @@
 
 A package that will buffer `move_base` goals until instructed to navigate to all waypoints in sequence.
 
-![airmate_navigation](readme_images/follow_waypoints_rviz.png "navigation")
+![airmate_navigation](../readme_images/navigation.png "navigation")
 
 ## Installation
 
@@ -23,7 +23,7 @@ rostopic pub /path_ready std_msgs/Empty -1
 # In this package, the robot cannot move t onext path until the dust density falss below a certian level(default : 400 micro_gram/m^3)
 ```
 
-![airmate_navigation](readme_images/follow_waypoint.gif "navigation")
+![airmate_navigation](../readme_images/navigation2.png "navigation")
 
 
 
