@@ -77,10 +77,10 @@ class FollowPath(State):
                     print('now ({}, {}) '.format(trans[0], trans[1]))
                     print('point ({}, {})'.format(waypoint.pose.pose.position.x,waypoint.pose.pose.position.y))
                     print('distance : {}'.format(distance))
-            print('Waiting for making romm clean')
+            print('Waiting for making rom clean')
             while True :
-                if dust_density <150: break
-            print('Target room in clean')
+                if dust_density <400: break
+            print('Target room is clean')
         return 'success'
 
 def convert_PoseWithCovArray_to_PoseArray(waypoints):

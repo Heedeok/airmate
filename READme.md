@@ -1,5 +1,10 @@
 # airmate(for melodic)
 
+## Environment
+ubuntu : 18.04
+ROS : melodic
+python : 2.7
+
 ## Instal ROS(melodic)
 #### ros.org
 ```
@@ -58,14 +63,15 @@ roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=cartographer conf
 #if you executing ratographer on real environment, change the configuration_basename to :=turtlebot3_lds_2d.lua)
 ```
 
-#### run waypoint navigation
+#### run airmate_navigation
 ```
-rosrun follow_waypoints follow_waypoints.py
+rosrun airmate_navigation airmate_navigation.py
 
 # create waypoints
 Use RViz’s "2D Pose Estimate" tool to create waypoints with mouse clicks.
+Or use application's '이동정화 모드'
 
-# executing waypoint following
+# executing '이동정화 모드'
 rostopic pub /path_ready std_msgs/Empty -1
 
 # to clear waypoint queue
