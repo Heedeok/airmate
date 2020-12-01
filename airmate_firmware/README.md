@@ -1,8 +1,15 @@
 # airmate_firmware 
 
-These codes are collection of firmware files for platforms using OpenCR
+These codes are collection of firmware files for platforms using OpenCR and arduino
 
-You just upload these 3 fiiles to your OpenCR board.
+## airmate_core
+
+upload 3 files into your OpenCR board.
+
+## airmate_dust
+
+upload 1 files into your arduino board.
+- you have to includ ros_lib library form ros-drivers : https://github.com/ros-drivers/
 
 ## Reference
 

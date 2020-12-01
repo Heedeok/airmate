@@ -79,7 +79,7 @@ class FollowPath(State):
                     print('distance : {}'.format(distance))
             print('Waiting for making rom clean')
             while True :
-                if dust_density <400: break
+                if dust_density <350: break
             print('Target room is clean')
         return 'success'
 

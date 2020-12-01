@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top_view"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="#ff404040"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:onClick="back"
+            android:text="뒤로가기" />
+
+        <Button
+            android:id="@+id/choose_map_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:onClick="chooserMap"
+            android:text="맵 선택" />
+
+        <Button
+            android:id="@+id/moving"
+            android:layout_width="wrap_content"
+            android:layout_height="50dip"
+            android:text="이동정화 시작" />
+
+        <RadioGroup
+            android:layout_width="352dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/set_pose_button"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:onClick="setPoseClicked"
+                android:text="이동정화 포인트 설정" />
+
+            <RadioButton
+                android:id="@+id/set_goal_button"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="setGoalClicked"
+                android:text="고정정화 포인트 설정" />
+
+            <LinearLayout
+                android:id="@+id/top_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff404040"
+                android:gravity="right"
+                android:orientation="horizontal" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+        <org.ros.android.view.RosImageView
+            android:id="@+id/image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight=".25"
+            android:src="@mipmap/icon" />
+
+
+        <LinearLayout
+            android:id="@+id/side_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight=".75"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight=".35"
+                android:textSize="20dp"
+                android:text="미세 먼지 농도는 "
+                android:gravity="center"/>
+
+            <org.ros.android.view.RosTextView
+                android:id="@+id/text2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight=".35"
+                android:textSize="20dp"
+                android:gravity="center"/>
+
+            <org.ros.android.view.visualization.VisualizationView
+                android:id="@+id/map_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight=".25" />
+
+
+            <org.ros.android.view.VirtualJoystickView
+                android:id="@+id/virtual_joystick"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight=".25"
+                android:adjustViewBounds="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
